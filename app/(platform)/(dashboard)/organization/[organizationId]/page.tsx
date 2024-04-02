@@ -1,13 +1,17 @@
-import { auth, OrganizationSwitcher } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import { db } from "@/lib/db";
+import { Form } from "./form";
 
-const OrganizationIdPage = () => {
-  const { userId, orgId } = auth();
-  console.log(orgId);
-
+const OrganizationIdPage = async () => {
+  const boards = await db.board.findMany();
   return (
     <div className="">
-      {/* <OrganizationSwitcher /> */}
-      Org: {orgId} <div></div>
+      <Form />
+      <div>
+        {boards.map((board) => (
+          <div key={board.id}>{board.title}</div>
+        ))}
+      </div>
     </div>
   );
 };
