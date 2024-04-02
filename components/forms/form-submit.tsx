@@ -31,7 +31,7 @@ export const FormSubmit = ({
       type="submit"
       size="sm"
       variant={variant}
-      className={cn(className)}
+      className={cn("bg-slate-500 rounded mt-2")}
     >
       {children}
     </Button>
