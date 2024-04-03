@@ -1,3 +1,4 @@
+import { FormPopover } from "@/components/forms/form-popover";
 import { Logo } from "@/components/logo";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 
@@ -8,9 +9,12 @@ export const Navbar = () => {
         <div>
           <Logo />
         </div>
-        <button className="rounded-full bg-slate-900 text-white p-2.5 px-4 h-auto">
-          Create
-        </button>
+        {/* Allows creation of boards through NavBar */}
+        <FormPopover>
+          <button className="rounded-full bg-slate-900 text-white p-2.5 px-4 h-auto">
+            Create
+          </button>
+        </FormPopover>
       </div>
       <div className="ml-auto flex items-center gap-x-2">
         {/* Organization switch to help the user navigate create and navigate to other orgs */}
