@@ -1,5 +1,7 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 import {
   Popover,
   PopoverContent,
@@ -27,10 +29,13 @@ export const FormPopover = ({
   align,
   sideOffset = 0,
 }: FormPopoverProps) => {
+  const router = useRouter();
+
   const { execute, fieldErrors } = useAction(createBoard, {
     onSuccess: (data) => {
       console.log({ data });
       toast.success("Board created!");
+      router.push(`/board/${data.id}`);
     },
     onError: (error) => {
       console.log({ error });
@@ -51,7 +56,7 @@ export const FormPopover = ({
       <PopoverTrigger asChild>{children}</PopoverTrigger>
       <PopoverContent
         align={align}
-        className="w-80 pt-3"
+        className="w-80 pt-3 bg-white"
         side={side}
         sideOffset={sideOffset}
       >
