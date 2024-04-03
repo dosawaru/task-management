@@ -11,16 +11,29 @@ import { InputType, ReturnType } from "./types";
 import { CreateBoard } from "./schema";
 
 const handler = async (data: InputType): Promise<ReturnType> =>{
-    const {userId} = auth();
+    const {userId, orgId} = auth();
     
     // Performs user authentication
-    if (!userId){
+    if (!userId || !orgId){
         return{
             error: "Unathorized",
         };
     }
 
-    const {title} = data;
+    const {title, image} = data;
+
+    // dissociate and seperate each field
+    const [imageId, imageThumbUrl, imageFullUrl]= image.split("|");
+
+    console.log({imageId, imageThumbUrl, imageFullUrl});
+
+    // return error of image fields are no found
+    if(!imageId || !imageThumbUrl || !imageFullUrl){
+        return{
+            error: "Missing Image. Can not create board!"
+        }
+    }
+
 
     let board;
 
@@ -29,7 +42,11 @@ const handler = async (data: InputType): Promise<ReturnType> =>{
         board = await db.board.create({
         data: {
             title,
-        },
+            orgId,
+            imageId,
+            imageThumbUrl,
+            imageFullUrl,
+        }
     });
     } catch(error){
         return {

@@ -12,6 +12,7 @@ import { toast } from "sonner";
 
 import { useAction } from "@/hooks/use-actions";
 import { createBoard } from "@/actions/create-board";
+import { FormImageSelect } from "./form-image-select";
 
 interface FormPopoverProps {
   children: React.ReactNode;
@@ -39,11 +40,13 @@ export const FormPopover = ({
 
   const onSubmit = (formData: FormData) => {
     const title = formData.get("title") as string;
+    const image = formData.get("image") as string;
 
-    execute({ title });
+    execute({ title, image });
   };
 
   return (
+    // Popover container to allow user to select image, title name, and submit
     <Popover>
       <PopoverTrigger asChild>{children}</PopoverTrigger>
       <PopoverContent
@@ -55,6 +58,9 @@ export const FormPopover = ({
         <div className="text-sm text-center">Create Board</div>
         <form action={onSubmit}>
           <div className="space-y-4">
+            {/* display image */}
+            <FormImageSelect id="image" errors={fieldErrors} />
+            {/* display text field */}
             <FormInput
               id="title"
               label="Board Title"
@@ -62,6 +68,7 @@ export const FormPopover = ({
               errors={fieldErrors}
             />
           </div>
+          {/* submit button */}
           <FormSubmit>Create</FormSubmit>
         </form>
       </PopoverContent>
