@@ -71,12 +71,14 @@ export const NavItem = ({
         )}
       >
         <div className="flex itmes-center gap-x-2">
-          <div className="w-7 h-7 relative">
+          <div className="relative">
             <Image
-              fill
               src={organization.imageUrl}
               alt=""
               className="rounded-sm object-cover"
+              style={{ width: "28px", height: "28px" }}
+              width={28}
+              height={28}
             />
           </div>
           <span className="text-small">{organization.name}</span>
