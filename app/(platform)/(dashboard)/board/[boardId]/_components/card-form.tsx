@@ -62,7 +62,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
             errors={fieldErrors}
             ref={ref}
             placeholder="Enter a title for this card..."
-            className="bg-white/80"
+            className="bg-white/80 rounded"
           />
           <input hidden id="listId" name="listId" value={listId} />
           <input hidden id="boardId" name="boardId" />
