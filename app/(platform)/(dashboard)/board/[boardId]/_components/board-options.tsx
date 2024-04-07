@@ -30,7 +30,7 @@ export const BoardOptions = ({ id }: BoardOptionsProps) => {
   return (
     // Utilized popover component to add delete functionality
     <Popover>
-      <PopoverTrigger>
+      <PopoverTrigger asChild>
         <Button className="h-auto w-auto p-2">
           <MoreHorizontal className="h-5 w-5" />
         </Button>
