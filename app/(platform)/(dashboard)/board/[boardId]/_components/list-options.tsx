@@ -77,25 +77,27 @@ export const ListOptions = ({ data, onAddCard }: ListOptionsProps) => {
         align="center"
         title="List Actions"
       >
-        <div className="text-sm text-center">List Actions</div>
+        <div className="text-md text-center underline">List Actions</div>
         {/* Button to add new card */}
-        <Button
-          variant="ghost"
-          className="w-full h-auto justify-start flex-col"
-        >
-          Add card...
+        <Button className="w-full h-auto flex-col items-start">
+          <Button className="bg-slate-500/30 rounded mt-2 w-full">
+            Add card...
+          </Button>
           {/* Form to copy list */}
-          <form action={onCopy}>
+          <form action={onCopy} className="w-full">
             <input hidden name="id" id="id" value={data.id} />
             <input hidden name="boardId" id="boardId" value={data.boardId} />
-            <FormSubmit>Copy List...</FormSubmit>
+            <FormSubmit className="bg-slate-500/30 rounded mt-2 w-full">
+              Copy List...
+            </FormSubmit>
           </form>
-          <Separator />
           {/* Form to delete list */}
-          <form action={onDelete}>
+          <form action={onDelete} className="w-full">
             <input hidden name="id" id="id" value={data.id} />
             <input hidden name="boardId" id="boardId" value={data.boardId} />
-            <FormSubmit>Delete List...</FormSubmit>
+            <FormSubmit className="bg-slate-500/30 rounded mt-2 w-full">
+              Delete List...
+            </FormSubmit>
           </form>
         </Button>
       </PopoverContent>
