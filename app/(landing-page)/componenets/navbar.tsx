@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <div className="fixed top-0 w-full h-14 px-4 border-b shodow-sm bg-white flex item-center">
+    <div className="fixed top-0 w-full h-14 px-4 border shodow-sm bg-white flex item-center">
       <div className=" mx-auto flex items-center w-full justify-between">
         <Logo />
         <div className="flex items-center justify-between w-auto space-x-4">

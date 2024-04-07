@@ -62,13 +62,14 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
             errors={fieldErrors}
             ref={ref}
             placeholder="Enter a title for this card..."
+            className="bg-white/80"
           />
           <input hidden id="listId" name="listId" value={listId} />
           <input hidden id="boardId" name="boardId" />
 
-          <div className="flex items-center gap-x-1">
+          <div className="flex items-center justify-between bg-inherit !ml-0">
             {/* Buttons to add card and exit out*/}
-            <FormSubmit>Add Card</FormSubmit>
+            <FormSubmit className="bg-white/50">Add Card</FormSubmit>
             <Button onClick={disableEditing} size="sm">
               <X className="h-4 w-4" />
             </Button>
@@ -83,7 +84,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
           onClick={enableEditing}
           className="h-auto px-2 w-full justify-start hover:text-black/60"
           size="sm"
-          variant="ghost"
+          variant="default"
         >
           <Plus className="h-4 w-4 mr-2" />
           Add Card

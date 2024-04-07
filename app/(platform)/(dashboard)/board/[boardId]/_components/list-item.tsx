@@ -35,7 +35,7 @@ export const ListItem = ({ data, index }: ListItemProps) => {
       {/* Outer wrapper for the list item */}
       <div className="w-full rounded shadow-md">
         {/* Inner wrapper for the list item content */}
-        <div className="w-full rounded bg-slate-200/90 transition font-medium py-2 px-4">
+        <div className="w-full rounded bg-white/80  transition font-medium py-2 px-4">
           {/* Render the list title */}
           <div>
             <div className="flex items-center justify-between">
@@ -48,7 +48,7 @@ export const ListItem = ({ data, index }: ListItemProps) => {
                 <div
                   key={card.id}
                   role="button"
-                  className="border-2 border-transparent hover:border-black py-2 px-3 bg-white rounded shadow"
+                  className="border border-transparent hover:border-slate-700 py-2 px-3 bg-white rounded shadow"
                   onClick={() => onOpen(card.id)}
                 >
                   {card.title}

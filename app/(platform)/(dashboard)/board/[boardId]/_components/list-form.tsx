@@ -72,17 +72,22 @@ export const ListForm = () => {
           action={onSubmit}
           ref={formRef}
           id="title"
-          className="w-full rounded shadow-md, bg-white space-y-4 p-3"
+          className="w-full shadow-sm rounded bg-white/80 space-y-4 p-3"
         >
           {/* Render form input for list title */}
           <FormInput
             ref={inputRef}
             errors={fieldErrors}
             id="title"
-            className="border-transparent hover:border-input focus:border-input transition rounded"
+            className="border-transparent hover:border focus:border transition rounded"
             placeholder="Enter list title..."
           />
-          <input hidden value={params.boardId} name="boardId" />
+          <input
+            hidden
+            value={params.boardId}
+            name="boardId"
+            className="bg-muted-foreground"
+          />
 
           {/* Buttons for submitting and canceling list creation */}
           <div className="flex item-center gap-x-1">
