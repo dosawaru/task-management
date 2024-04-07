@@ -60,7 +60,7 @@ export const ModalHeader = ({ data }: HeaderProps) => {
     <div className="flex items-start gap=x-3 mb-6 w-full">
       <Layout className="h-5 w-5 mt-1" />
       <div className="w-9/12 px-2">
-        <form action={onSubmit}>
+        <form action={onSubmit} aria-readonly>
           <FormInput
             ref={inputRef}
             onBlur={onBlur}
