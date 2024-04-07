@@ -1,3 +1,5 @@
+import { ModalProvider } from "@/components/modal/card-modal/modal-provider";
+import { QueryProvider } from "@/components/modal/card-modal/query-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 
@@ -9,8 +11,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <Toaster />
-        <body>{children}</body>
+        <QueryProvider>
+          <Toaster />
+          <ModalProvider />
+          <body>{children}</body>
+        </QueryProvider>
       </html>
     </ClerkProvider>
   );
