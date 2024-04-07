@@ -63,7 +63,7 @@ export const FormImageSelect = ({ id, errors }: FormImageSelectProps) => {
               className="hidden"
               defaultChecked={selectedImageID === defaultImages.id}
               disabled={pending}
-              value={`${defaultImages.id}|${defaultImages.urls.thumb}|${defaultImages.urls.full}`}
+              defaultValue={`${defaultImages.id}|${defaultImages.urls.thumb}|${defaultImages.urls.full}`}
             />
             {/* display image */}
             <Image

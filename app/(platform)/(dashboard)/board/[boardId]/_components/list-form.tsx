@@ -82,7 +82,7 @@ export const ListForm = () => {
             className="border hover:border focus:border transition rounded"
             placeholder="Enter list title..."
           />
-          <input hidden value={params.boardId} name="boardId" />
+          <input hidden defaultValue={params.boardId} name="boardId" />
 
           {/* Buttons for submitting and canceling list creation */}
           <div className="flex item-center justify-between">

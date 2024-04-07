@@ -64,7 +64,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
             placeholder="Enter a title for this card..."
             className="bg-white/80 rounded"
           />
-          <input hidden id="listId" name="listId" value={listId} />
+          <input hidden id="listId" name="listId" defaultValue={listId} />
           <input hidden id="boardId" name="boardId" />
 
           <div className="flex items-center justify-between bg-inherit !ml-0">
