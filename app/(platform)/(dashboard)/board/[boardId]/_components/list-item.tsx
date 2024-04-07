@@ -5,6 +5,7 @@ import { ListOptions } from "./list-options";
 import { ElementRef, useRef, useState } from "react";
 import { CardForm } from "./card-form";
 import { cn } from "@/lib/utils";
+import { useCardModal } from "@/hooks/use-card-modal";
 
 interface ListItemProps {
   data: ListWithCards;
@@ -14,6 +15,7 @@ interface ListItemProps {
 export const ListItem = ({ data, index }: ListItemProps) => {
   const textareaRef = useRef<ElementRef<"textarea">>(null);
   const [isEditing, setIsEditing] = useState(false);
+  const { onOpen } = useCardModal();
 
   //disables editing
   const disableEditing = () => {
@@ -43,7 +45,12 @@ export const ListItem = ({ data, index }: ListItemProps) => {
             {/* Render the individual card items */}
             <ol className={cn("mx-1 px-1 py-0.5 flex flex-col gap-y-2")}>
               {data.cards.map((card, index) => (
-                <div className="border-2 border-transparent hover:border-black py-2 px-3 bg-white rounded shadow">
+                <div
+                  key={card.id}
+                  role="button"
+                  className="border-2 border-transparent hover:border-black py-2 px-3 bg-white rounded shadow"
+                  onClick={() => onOpen(card.id)}
+                >
                   {card.title}
                 </div>
               ))}
