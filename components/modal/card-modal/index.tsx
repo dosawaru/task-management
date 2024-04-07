@@ -7,6 +7,7 @@ import { useCardModal } from "@/hooks/use-card-modal";
 
 import { CardWithList } from "@/types";
 import { fetcher } from "@/lib/fetcher";
+import { ModalHeader } from "./header";
 
 export const CardModal = () => {
   const id = useCardModal((state) => state.id);
@@ -24,7 +25,9 @@ export const CardModal = () => {
   // Render modal dialog with card data if available
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent>{cardData?.title}</DialogContent>
+      <DialogContent>
+        {!cardData ? <div /> : <ModalHeader data={cardData} />}
+      </DialogContent>
     </Dialog>
   );
 };
