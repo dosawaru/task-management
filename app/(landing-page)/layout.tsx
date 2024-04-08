@@ -1,6 +1,6 @@
 import React from "react";
-import { Navbar } from "./componenets/navbar";
-import { Footer } from "./componenets/footer";
+import { Navbar } from "./components/navbar";
+import { Footer } from "./components/footer";
 
 export const LandingPageLayout = ({
   children,
