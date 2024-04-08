@@ -1,19 +1,20 @@
 import { FormPopover } from "@/components/forms/form-popover";
 import { Logo } from "@/components/logo";
+import { Button } from "@/components/ui/button";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 
 export const Navbar = () => {
   return (
     <nav className="px-4 p-1 fixed z-50 top-0 w-full shadow-sm bg-white flex items-center">
-      <div className="flex items-center gap-x-4">
+      <div className="flex items-center sm:gap-x-4 px-0">
         <div>
           <Logo />
         </div>
         {/* Allows creation of boards through NavBar */}
         <FormPopover>
-          <button className="rounded-full bg-slate-900 text-white p-2.5 px-4 h-auto">
+          <Button className="px-4 sm:m-0 ml-4 h-auto bg-[#473080]/80 rounded-xl text-white hover:bg-[#473080]/90">
             Create
-          </button>
+          </Button>
         </FormPopover>
       </div>
       <div className="ml-auto flex items-center gap-x-2">

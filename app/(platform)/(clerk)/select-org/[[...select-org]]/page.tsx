@@ -5,6 +5,7 @@ export default function CreateOrg() {
     <OrganizationList
       afterSelectOrganizationUrl="/organization/:id"
       afterCreateOrganizationUrl="/organization/:id"
+      hidePersonal
     />
   );
 }

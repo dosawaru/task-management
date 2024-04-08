@@ -42,7 +42,9 @@ export const BoardList = async () => {
           >
             <div className="inset-0 group-hover:bg-black/40 absolute rounded transition-transform transform hover:scale-110">
               {/* Display board title */}
-              <p className="relative font-bold p-4 text-white">{board.title}</p>
+              <p className="relative font-bold py-2 px-4 text-white bg-black/40 h-9">
+                {board.title}
+              </p>
             </div>
           </Link>
         ))}

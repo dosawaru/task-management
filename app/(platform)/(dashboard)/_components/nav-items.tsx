@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Activity, CreditCard, Layout, Settings } from "lucide-react";
+import { Layout, Settings } from "lucide-react";
 
 import {
   AccordionContent,
@@ -45,11 +45,6 @@ export const NavItem = ({
       href: `/organization/${organization.id}`,
     },
     {
-      label: "Activity",
-      icons: <Activity className="h-4 w-4 mr-2" />,
-      href: `/organization/${organization.id}/activity`,
-    },
-    {
       label: "Settings",
       icons: <Settings className="h-4 w-4 mr-2" />,
       href: `/organization/${organization.id}/settings`,
@@ -75,7 +70,7 @@ export const NavItem = ({
             <Image
               src={organization.imageUrl}
               alt=""
-              className="rounded-sm object-cover"
+              className="rounded object-cover"
               style={{ width: "28px", height: "28px" }}
               width={28}
               height={28}

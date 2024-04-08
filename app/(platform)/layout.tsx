@@ -10,10 +10,11 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" className="bg-slate-100" suppressHydrationWarning>
         <QueryProvider>
           <Toaster />
           <ModalProvider />
+
           <body>{children}</body>
         </QueryProvider>
       </html>
