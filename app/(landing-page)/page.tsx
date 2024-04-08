@@ -7,7 +7,7 @@ export default function Home() {
       <div className="flex items-center justify-center flex-col">
         <div className="mb-4 flex items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase">
           <Medal className="h-6 w-6 mr-2" />
-          No# 1 task managment
+          Task Management Application
         </div>
         <h1 className="text-3xl md:text-6xl text-center text-neutral-800 mb-6">
           Strive helps reach your goals and be
@@ -21,9 +21,6 @@ export default function Home() {
         before. Whether in the offices, at home, or on the go, unlock projects
         true potential with Strive.
       </div>
-      <button className="mt-6 rounded-full bg-slate-900 text-white p-6">
-        <Link href="/sign-up">Try Strive Now!</Link>
-      </button>
     </section>
   );
 }

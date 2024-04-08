@@ -1,5 +1,12 @@
+// "use client";
+
 import { SignIn } from "@clerk/nextjs";
 
 export default function Page() {
-  return <SignIn />;
+  return (
+    <div>
+      <h1 hidden>Sign In Page</h1>
+      <SignIn />
+    </div>
+  );
 }
