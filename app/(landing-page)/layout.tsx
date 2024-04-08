@@ -2,11 +2,7 @@ import React from "react";
 import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
 
-export const LandingPageLayout = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+const LandingPageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="h-full bg-slate-100">
       <Navbar />
