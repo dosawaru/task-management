@@ -25,8 +25,6 @@ const handler = async (data: InputType): Promise<ReturnType> =>{
     // dissociate and seperate each field
     const [imageId, imageThumbUrl, imageFullUrl]= image.split("|");
 
-    console.log({imageId, imageThumbUrl, imageFullUrl});
-
     // return error of image fields are no found
     if(!imageId || !imageThumbUrl || !imageFullUrl){
         return{

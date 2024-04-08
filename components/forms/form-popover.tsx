@@ -24,11 +24,7 @@ interface FormPopoverProps {
   sideOffset?: number;
 }
 
-export const FormPopover = ({
-  children,
-  align,
-  sideOffset = 0,
-}: FormPopoverProps) => {
+export const FormPopover = ({ children, align }: FormPopoverProps) => {
   const router = useRouter();
 
   const [images, setImages] = useState<Array<Record<string, any>>>([
@@ -36,7 +32,6 @@ export const FormPopover = ({
   ]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImageID, setSelectedImageID] = useState(null);
-  const [selectedImage, setSelectedImage] = useState("");
 
   const { pending } = useFormStatus();
   const [defaultValue, setDefaultValue] = useState("");

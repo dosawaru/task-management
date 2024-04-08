@@ -52,8 +52,6 @@ export const ModalHeader = ({ data }: HeaderProps) => {
       return;
     }
     execute({ title, boardId, id: data.id });
-
-    console.log({ title });
   };
 
   return (

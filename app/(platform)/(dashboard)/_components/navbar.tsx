@@ -11,7 +11,7 @@ export const Navbar = () => {
           <Logo />
         </div>
         {/* Allows creation of boards through NavBar */}
-        <FormPopover>
+        <FormPopover side="bottom" sideOffset={10}>
           <Button className="px-4 sm:m-0 ml-4 h-auto bg-[#473080]/80 rounded-xl text-white hover:bg-[#473080]/90">
             Create
           </Button>

@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 import { FormErrors } from "./form-errors";
 
+// Define props interface for the FormTextarea
 interface FormTextareaProps {
   id: string;
   label?: string;
@@ -23,6 +24,7 @@ interface FormTextareaProps {
   defaultValue?: string;
 }
 
+// Define the FormTextarea component
 export const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextareaProps>(
   (
     {

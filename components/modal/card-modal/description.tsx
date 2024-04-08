@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { useAction } from "@/hooks/use-actions";
 import { CardWithList } from "@/types";
 import { useQueryClient } from "@tanstack/react-query";
-import { error } from "console";
 import { AlignLeft } from "lucide-react";
 import { useParams } from "next/navigation";
 import { ElementRef, useRef, useState } from "react";

@@ -4,9 +4,9 @@ import { ActionState, fieldErrors } from "@/lib/create-safe-actions";
 type Action<TInput, TOutput> = (data: TInput) => Promise<ActionState<TInput, TOutput>>;
 
 interface UseActionOptions<TOutput> {
-    onSuccess?: (data: TOutput) => void; // Callback function for successful action 
-    onError?: (error: string) => void; // Callback function for errors
-    onComplete?: () => void; // Callback function for completed action
+    onSuccess?: (data: TOutput) => void; 
+    onError?: (error: string) => void; 
+    onComplete?: () => void; 
 };
 
 // Define the useAction hook to use local component state 

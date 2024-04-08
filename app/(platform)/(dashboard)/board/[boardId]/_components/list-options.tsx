@@ -14,7 +14,6 @@ import { List } from "@prisma/client";
 import { MoreHorizontal } from "lucide-react";
 import { deleteList } from "@/actions/delete-list";
 import { FormSubmit } from "@/components/forms/form-submit";
-import { Separator } from "@/components/ui/separator";
 import { ElementRef, useRef } from "react";
 import { copyList } from "@/actions/copy-list";
 

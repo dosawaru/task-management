@@ -7,7 +7,6 @@ import { Plus, X } from "lucide-react";
 import { useAction } from "@/hooks/use-actions";
 import { createCard } from "@/actions/create-card";
 import { useRef, forwardRef, ElementRef } from "react";
-import { useParams } from "next/navigation";
 import { useEventListener, useOnClickOutside } from "usehooks-ts";
 import { toast } from "sonner";
 
